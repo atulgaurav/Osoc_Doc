@@ -1,0 +1,150 @@
+# Osoc_Doc
+Solution_pdf
+Question 2.
+echo “Enter the limit:”
+
+read n
+
+echo “Enter the numbers”
+
+for(( i=0 ;i<n; i++ ))
+
+do
+
+read m
+
+a[i]=$m
+
+done
+
+for(( i=1; i<n; i++ ))
+
+do
+
+for(( j=0; j<n-i; j++))
+
+do
+
+if [ ${a[$j]} -gt ${a[$j+1]} ]
+
+then
+
+t=${a[$j]}
+
+a[$j]=${a[$j+1]}
+
+a[$j+1]=$t
+
+fi
+
+done
+
+done
+
+echo “Sorted array is”
+
+for(( i=0; i<n; i++ ))
+
+do
+
+echo “${a[$i]}”
+
+done
+
+echo “Enter the element to be searched :”
+
+read s
+
+l=0
+
+c=0
+
+u=$(($n-1))
+
+while [ $l -le $u ]
+
+do
+
+mid=$(((( $l+$u ))/2 ))
+
+if [ $s -eq ${a[$mid]} ]
+
+then
+
+c=1
+
+break
+
+elif [ $s -lt ${a[$mid]} ]
+
+then
+
+u=$(($mid-1))
+
+else
+
+l=$(($mid+1))
+
+fi
+
+done
+
+if [ $c -eq 1 ]
+
+then
+
+echo “Element found at position $(($mid+1))”
+
+else
+
+echo “Element not found”
+
+fi
+
+question 3.
+1.free command-The free command is the most simple and easy to use command to check memory usage on linux.
+syntax-$ free -m
+
+2./proc/meminfo-The next way to check memory usage is to read the /proc/meminfo file. Know that the /proc file system does not contain real files.
+ They are rather virtual files that contain dynamic information about the kernel and the system.
+
+syntax-$cat /proc/meminfo
+
+3.vmstat-the vmstat command with the s option, lays out the memory usage statistics much like the proc command. 
+syntax- $ vmstat -s
+
+4.Top command-he top command is generally used to check memory and cpu usage per process. However it also reports total memory 
+ usage and can be used to monitor the total RAM usage.The header on output has the required information. Here is a sample output.
+
+5.htop-Similar to the top command, the htop command also shows memory usage along with various other details.
+
+
+question 4.
+find / -iname book1. where book one will be our file which we want to find.
+
+question 5.
+cd/home
+
+question 6.
+There are various reason for this which are-
+a.Security of virus-In the operating system such as Windows, users have full admin access to the accounts of software.
+                    When the virus strikes in this system and then within few seconds it corrupts the whole system.
+                    In short, all the files are in danger due to the open access, but in the Linux, very low access is given to the users.
+                   Thus the viruses can’t attack the whole system and they only attack few files, and other system works without any issue.
+
+
+  
+b.fewer use-The number of users in the Linux operating system is lesser than the iOS or Windows user. 
+            Thus fewer people are using Linux system makes it more secure as compared to the overly crowded operating system Windows.
+
+Question 8.
+To reset a user’s password, use passwd command. You have to change it to a different password.
+
+Login as the root user.
+Type the following command:
+# passwd username
+Now
+use new password.
+#passwd new
+
+Question 9.
